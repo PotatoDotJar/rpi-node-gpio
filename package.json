@@ -1,0 +1,16 @@
+{
+  "name": "rpi-node-gpio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ledScroll.js",
+    "docker-build": "docker build -t led-scroll .",
+    "docker-run": "docker run -d -v /sys/devices/platform/soc/fe200000.gpio:/sys/devices/platform/soc/fe200000.gpio -v /sys/class/gpio:/sys/class/gpio led-scroll"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "onoff": "^6.0.1"
+  }
+}
